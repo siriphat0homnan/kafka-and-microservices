@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  # api-gateway:
+  #   build: ./api-gateway
+  #   command: npm start
+  #   restart: always
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - .:/usr/api-gateway
+  app1:
+    build: ./orders
+    command: npm start
+    restart: always
+    ports:
+      - "3005:3000"
+    volumes:
+      - .:/usr/app1
+  app2:
+    build: ./products
+    command: npm start
+    restart: always
+    ports:
+      - "3006:3000"
+    volumes:
+      - .:/usr/app2
+

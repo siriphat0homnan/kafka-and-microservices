@@ -1,0 +1,26 @@
+{
+  "name": "api-gateway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js getting-started.properties",
+    "start:producer": "nodemon producer.js getting-started.properties",
+    "start:consumer": "nodemon consumer.js getting-started.properties"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@kafkajs/confluent-schema-registry": "^3.3.0",
+    "express": "^4.18.1",
+    "express-http-proxy": "^1.6.3",
+    "kafkajs": "^2.2.4",
+    "node-rdkafka": "^2.15.0",
+    "nodemon": "^2.0.22",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^2.0.6"
+  }
+}
